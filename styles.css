@@ -1,0 +1,218 @@
+/*  Author: Kaylee Martin
+    Project: About Me
+    Class: CIS130
+    Date: 8/23/2022
+ */
+
+/* navigation styles */
+nav{
+    position:relative;
+    background-color:rgba(167, 90, 230, 0.39);
+  
+  }
+  .nav-link{
+    color:rgb(0, 0, 0);
+  }
+  .navbar-toggler{
+    color:white;
+    background-color:grey;
+    text-decoration:none;
+    background-image:url(toggle.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding:2px;
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    color: grey;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 25px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  
+  a:hover
+  {
+      color: #888888;
+      background: rgba(156, 134, 235, 0.993);
+      box-shadow: 0 0 30px rgba(69, 133, 206, 0.993), 0 0 50px rgba(65, 13, 71, 0.993), 0 0 80px rgba(65, 13, 71, 0.993);
+      transition-delay: 1.5s;
+  }
+  
+  a span
+  {
+      position: absolute;
+      display:flex;
+  }
+  a span:nth-child(1)
+  {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,rgba(65, 13, 71, 0.993));
+  }
+  a:hover span:nth-child(1)
+  {
+    left: 100%;
+    transition: 0.75s;
+  }
+  a span:nth-child(3)
+  {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,rgba(65, 13, 71, 0.993));
+  }
+  a:hover span:nth-child(3)
+  {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.65s;
+  }
+  a span:nth-child(2)
+  {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,rgba(65, 13, 71, 0.993));
+  }
+  a:hover span:nth-child(2)
+  {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  a span:nth-child(4)
+  {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,rgba(65, 13, 71, 0.993));
+  }
+  a:hover span:nth-child(4)
+  {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 1s;
+  }
+/* End Navigation Styles */
+
+
+
+/* Regular Styles */
+ body{
+    background-image:url(mainbackgroundgif.gif);
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:15px;
+}
+
+
+
+/* Landing Page Animation Effect */
+h1 {
+    position: relative;
+    font-size: 6vw;
+    color: black;
+    -webkit-text-stroke: 0.25vw whitesmoke;
+    text-transform: uppercase;
+    font-family: 'Macondo', cursive;
+}
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(84, 97, 219, 0.993);
+    -webkit-text-stroke: 0.1vw rgb(0, 0, 0);
+    border-right: 0px;
+    overflow: hidden;
+    animation: animate 8s linear infinite;
+}
+h2,footer{
+    font-family: 'Macondo', cursive;
+    padding:10px;
+}
+h3, ul{
+    font-family: 'Bad Script', cursive;
+    padding:10px;
+}
+p{
+    font-family: 'Bad Script', cursive;
+    padding:20px;
+    font-size:25px;
+}
+
+@keyframes animate
+ {
+    0%, 10%,30%, 100%
+        {
+           width: 0;
+        }
+          60%,90%
+        {
+            width: 100%;
+        }
+    }
+/* Card Styles */
+.card{
+    padding:25px;
+    object-fit:cover;
+    align-items:center;
+    border:solid rgba(124, 84, 218, 0.781) 4px;
+
+}
+/* Three even columns for Cards */
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* List Styles for Hobbies Page */
+          
+ul {
+    list-style-image: url("lightbulb1.svg");
+  }
+  /* Top of Page Button Styles */
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(112, 30, 145);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border:double white 3px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  
+
+  
